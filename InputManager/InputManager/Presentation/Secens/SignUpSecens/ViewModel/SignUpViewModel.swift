@@ -9,12 +9,10 @@ import UIKit
 
 class SignUpViewModel {
     private let signUpValidation: SignUpValidation
-//    private let lodingView: UIView
     weak var delegate: AlertView?
     
     init(signUpValidation: SignUpValidation) {
         self.signUpValidation = signUpValidation
-//        self.lodingView = lodingView
     }
     
     func signUp(model: SignUpModel) {

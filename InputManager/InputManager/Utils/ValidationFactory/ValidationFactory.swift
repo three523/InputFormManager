@@ -14,7 +14,8 @@ final class ValidationFactory {
             EmailValidation(fieldName: "email", emailValidator: EmailValidator()),
             RequiredFieldValidation(fieldName: "password"),
             PasswordValidation(fieldName: "password", passwordValidator: PasswordValidator()),
-            ConfirmValidation(fieldName: "password", fieldNameToCompare: "passwordConfirm")
+            ConfirmValidation(fieldName: "password", fieldNameToCompare: "passwordConfirm"),
+            PhoneNumberValidation(fieldName: "phoneNumber", phoneNumberValidator: PhoneNumberValidator())
         ])
     }
 }

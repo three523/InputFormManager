@@ -28,6 +28,12 @@ final class SignUpViewController: UIViewController {
         textField.placeholder = "PasswordConfirm"
         return textField
     }()
+    private let phoneNumberTextField: UITextField = {
+        let textField = UITextField()
+        textField.font = .systemFont(ofSize: 17, weight: .regular)
+        textField.placeholder = "phoneNumber"
+        return textField
+    }()
     private let signUpButton: UIButton = {
         let button = UIButton()
         button.setTitle("회원가입", for: .normal)
@@ -70,6 +76,7 @@ private extension SignUpViewController {
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
         view.addSubview(passwordConfirmTextField)
+        view.addSubview(phoneNumberTextField)
         view.addSubview(signUpButton)
     }
     
@@ -91,6 +98,11 @@ private extension SignUpViewController {
         passwordConfirmTextField.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: margin).isActive = true
         passwordConfirmTextField.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -margin).isActive = true
         
+        phoneNumberTextField.translatesAutoresizingMaskIntoConstraints = false
+        phoneNumberTextField.topAnchor.constraint(equalTo: passwordConfirmTextField.bottomAnchor, constant: margin).isActive = true
+        phoneNumberTextField.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: margin).isActive = true
+        phoneNumberTextField.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -margin).isActive = true
+        
         signUpButton.translatesAutoresizingMaskIntoConstraints = false
         signUpButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: margin).isActive = true
         signUpButton.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -margin).isActive = true
@@ -103,7 +115,7 @@ private extension SignUpViewController {
     }
     
     @objc func signUp() {
-        let signUpModel = SignUpModel(email: emailTextField.text, password: passwordTextField.text, passwordConfirm: passwordConfirmTextField.text)
+        let signUpModel = SignUpModel(email: emailTextField.text, password: passwordTextField.text, passwordConfirm: passwordConfirmTextField.text, phoneNumber: phoneNumberTextField.text)
         viewModel.signUp(model: signUpModel)
     }
 }

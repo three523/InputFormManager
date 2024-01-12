@@ -15,6 +15,7 @@ enum ValidateError: Error, Equatable {
     case emailValidate
     case passwordValidate
     case confirm(FieldName, ConfirmFieldName)
+    case phoneNumberValidate
 }
 
 extension ValidateError: LocalizedError {
@@ -28,6 +29,8 @@ extension ValidateError: LocalizedError {
             return NSLocalizedString("\(fieldName) and \(confirmFieldName) are not the same", comment: "")
         case .requiredEmpty(let fieldLabel):
             return NSLocalizedString("\(fieldLabel) is Empty", comment: "")
+        case .phoneNumberValidate:
+            return NSLocalizedString("PhoneNumber is not Validate", comment: "")
         }
     }
 }
