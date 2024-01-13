@@ -11,4 +11,5 @@ struct SignUpEntity {
     var email: String
     var password: String
     var passwordConfirm: String
+    var phoneNumber: String
 }

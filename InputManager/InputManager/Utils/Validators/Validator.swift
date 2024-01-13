@@ -11,3 +11,11 @@ protocol Validator {
     var pattern: String { get }
     func isValid(text: String) -> Bool
 }
+
+extension Validator {
+    func isValid(text: String) -> Bool {
+        let range = NSRange(location: 0, length: text.count)
+        let regex = try! NSRegularExpression(pattern: pattern)
+        return regex.firstMatch(in: text, options: [], range: range) != nil
+    }
+}

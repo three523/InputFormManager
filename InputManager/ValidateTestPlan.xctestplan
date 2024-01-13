@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "01542E76-3442-48E9-9680-B8805B873BB0",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:InputManager.xcodeproj",
+        "identifier" : "18AFACB22B4FCE4D007047D0",
+        "name" : "ValidateTests"
+      }
+    }
+  ],
+  "version" : 1
+}
