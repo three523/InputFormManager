@@ -17,4 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Validate Test
-      run: xcodebuild test -project InputManager/InputManager.xcodeproj -scheme ValidateTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14 Pro Max,OS=16.4'
+      run: xcodebuild clean test -project InputManager/InputManager.xcodeproj -scheme ValidateTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest'
