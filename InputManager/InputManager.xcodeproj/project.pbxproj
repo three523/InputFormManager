@@ -85,6 +85,7 @@
 		18C75F072B4C20FF00592EE7 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		18C75F092B4C21AF00592EE7 /* PasswordValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidation.swift; sourceTree = "<group>"; };
 		18C75F0E2B4C4FDC00592EE7 /* SignUpValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpValidation.swift; sourceTree = "<group>"; };
+		18D94F712B525DA200D94F5A /* ValidateTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ValidateTestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +239,7 @@
 		18BB00EC2B492692001A161F = {
 			isa = PBXGroup;
 			children = (
+				18D94F712B525DA200D94F5A /* ValidateTestPlan.xctestplan */,
 				18BB00F72B492692001A161F /* InputManager */,
 				18AFACB42B4FCE4D007047D0 /* ValidateTests */,
 				18BB00F62B492692001A161F /* Products */,
