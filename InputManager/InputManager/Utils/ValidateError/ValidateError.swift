@@ -7,11 +7,14 @@
 
 import Foundation
 
-enum ValidateError: Error {
+typealias FieldName = String
+typealias ConfirmFieldName = String
+
+enum ValidateError: Error, Equatable {
     case requiredEmpty(String)
     case emailValidate
     case passwordValidate
-    case passwordConfirm
+    case confirm(FieldName, ConfirmFieldName)
 }
 
 extension ValidateError: LocalizedError {
@@ -21,8 +24,8 @@ extension ValidateError: LocalizedError {
             return NSLocalizedString("Email is not Validate", comment: "")
         case .passwordValidate:
             return NSLocalizedString("Password is not Validate", comment: "")
-        case .passwordConfirm:
-            return NSLocalizedString("Password and PasswordConfirm are not the same", comment: "")
+        case .confirm(let fieldName, let confirmFieldName):
+            return NSLocalizedString("\(fieldName) and \(confirmFieldName) are not the same", comment: "")
         case .requiredEmpty(let fieldLabel):
             return NSLocalizedString("\(fieldLabel) is Empty", comment: "")
         }

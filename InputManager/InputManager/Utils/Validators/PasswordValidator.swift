@@ -9,7 +9,7 @@ import Foundation
 
 final class PasswordValidator: Validator {
     
-    let pattern: String = "^(?=.*[0-9])(?=.*[^a-zA-Z0-9])(?i:[a-zA-Z0-9]){8,}$"
+    let pattern: String = "^(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}"
     
     func isValid(text: String) -> Bool {
         let range = NSRange(location: 0, length: text.count)

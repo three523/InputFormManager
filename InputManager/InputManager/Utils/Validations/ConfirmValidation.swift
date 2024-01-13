@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class PasswordConfirmValidation: validatable {
+final class ConfirmValidation: validatable {
     private let fieldName: String
     private let fieldNameToCompare: String
     
@@ -19,7 +19,7 @@ final class PasswordConfirmValidation: validatable {
     func validate(data: [String : Any]?) -> ValidateError? {
         guard let fieldText = data?[fieldName] as? String,
               let fieldToCompareText = data?[fieldNameToCompare] as? String,
-              (fieldText == fieldToCompareText) == false else { return .passwordConfirm }
+              fieldText == fieldToCompareText else { return .confirm(fieldName, fieldNameToCompare) }
         return nil
     }
 }

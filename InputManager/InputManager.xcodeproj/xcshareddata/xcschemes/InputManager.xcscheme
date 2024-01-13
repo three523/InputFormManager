@@ -30,11 +30,11 @@
       shouldAutocreateTestPlan = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO"
+            skipped = "YES"
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18B925502B4A9E83009AA921"
+               BlueprintIdentifier = "18AFAC852B4FCBB5007047D0"
                BuildableName = "InputManagerTests.xctest"
                BlueprintName = "InputManagerTests"
                ReferencedContainer = "container:InputManager.xcodeproj">
@@ -45,7 +45,29 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18B9255F2B4A9F6A009AA921"
+               BlueprintIdentifier = "18AFACB22B4FCE4D007047D0"
+               BuildableName = "ValidateTests.xctest"
+               BlueprintName = "ValidateTests"
+               ReferencedContainer = "container:InputManager.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "18AFAC852B4FCBB5007047D0"
+               BuildableName = "InputManagerTests.xctest"
+               BlueprintName = "InputManagerTests"
+               ReferencedContainer = "container:InputManager.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "18AFACB22B4FCE4D007047D0"
                BuildableName = "ValidateTests.xctest"
                BlueprintName = "ValidateTests"
                ReferencedContainer = "container:InputManager.xcodeproj">

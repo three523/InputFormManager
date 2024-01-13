@@ -10,11 +10,11 @@ import Foundation
 final class ValidationFactory {
     static func makeSignUpValidation() -> SignUpValidation {
         return SignUpValidation(validations: [
-            RequiredFieldValidation(fieldName: "email", fieldLabel: "Email"),
-            RequiredFieldValidation(fieldName: "password", fieldLabel: "Password"),
+            RequiredFieldValidation(fieldName: "email"),
             EmailValidation(fieldName: "email", emailValidator: EmailValidator()),
+            RequiredFieldValidation(fieldName: "password"),
             PasswordValidation(fieldName: "password", passwordValidator: PasswordValidator()),
-            PasswordConfirmValidation(fieldName: "password", fieldNameToCompare: "passwordConfirm")
+            ConfirmValidation(fieldName: "password", fieldNameToCompare: "passwordConfirm")
         ])
     }
 }

@@ -9,11 +9,9 @@ import Foundation
 
 final class RequiredFieldValidation: validatable {
     let fieldName: String
-    let fieldLabel: String
     
-    init(fieldName: String, fieldLabel: String) {
+    init(fieldName: String) {
         self.fieldName = fieldName
-        self.fieldLabel = fieldLabel
     }
     
     func validate(data: [String: Any]?) -> ValidateError? {
